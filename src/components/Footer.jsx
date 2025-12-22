@@ -45,7 +45,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-5">
           <p className="text-gray-600 text-sm text-center md:text-left">
-            © {currentYear} AAA Driving School. All rights reserved. | Website by Kapingar Ltd
+            © {currentYear} Drive with AAA. All rights reserved. | Website by Kapingar Ltd
           </p>
           <ul className="flex gap-4">
             {socialLinks.map((social, index) => (

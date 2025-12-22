@@ -14,10 +14,10 @@ const Hero = () => {
           Your Journey to Safe Driving Starts Here
         </p>
         <h1 className="text-5xl lg:text-7xl font-extrabold mb-5 bg-gradient-to-r from-gray-900 to-brand bg-clip-text text-transparent tracking-tight animate-fadeIn animation-delay-200 lg:h-[82px] lg:flex lg:items-center lg:justify-center">
-          AAA Driving School
+          Drive with AAA
         </h1>
         <p className="text-gray-600 text-lg lg:text-xl max-w-2xl mx-auto mb-10 animate-fadeIn animation-delay-400">
-          Professional driving instruction in Sheffield and South Yorkshire. 
+          Professional driving instruction in Sheffield and Rotherham. 
           Expert ADI-approved instructors with high pass rates.
         </p>
         <a 

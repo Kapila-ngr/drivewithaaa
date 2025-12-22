@@ -109,11 +109,11 @@ const About = () => {
             About Us
           </div>
           <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
-            AAA Driving School
+            Drive with AAA
           </h2>
           <div className="w-24 h-1.5 bg-gradient-to-r from-brand to-accent mx-auto rounded-full mb-8 animate-expandWidth"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Your trusted partner for professional driving instruction in Sheffield and South Yorkshire
+            Your trusted partner for professional driving instruction in Sheffield and Rotherham
           </p>
         </div>
 
@@ -144,7 +144,7 @@ const About = () => {
             <div className={`bg-gradient-to-br from-brand to-accent rounded-3xl p-8 text-white shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 -translate-x-0' : 'opacity-0 -translate-x-8'}`}>
               <h3 className="text-2xl font-bold mb-3">15+ Years</h3>
               <p className="text-white/90">
-                of excellence in driver education across Sheffield and South Yorkshire
+                of excellence in driver education across Sheffield and Rotherham
               </p>
             </div>
           </div>
@@ -174,7 +174,7 @@ const About = () => {
             </svg>
             <div className="text-left">
               <p className="text-sm text-gray-500 font-medium">Serving</p>
-              <p className="text-lg font-bold text-gray-900">Sheffield & South Yorkshire</p>
+              <p className="text-lg font-bold text-gray-900">Sheffield & Rotherham</p>
             </div>
           </div>
         </div>

@@ -84,7 +84,7 @@ const Results = () => {
         </h2>
         <div className="w-16 h-1 bg-gradient-to-r from-brand to-accent mx-auto rounded-full mb-5"></div>
         <p className={`text-center max-w-3xl mx-auto mb-12 text-gray-600 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          We take pride in our students' success. Here's what our learners have achieved with AAA Driving School.
+          We take pride in our students' success. Here's what our learners have achieved with Drive with AAA.
         </p>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
@@ -101,7 +101,7 @@ const Results = () => {
           <h3 className="text-3xl font-bold text-brand mb-8 text-center">Student Testimonials</h3>
           <div className="space-y-6">
             <blockquote className="italic text-gray-700 bg-white p-6 rounded-xl shadow-md border-l-4 border-brand">
-              "I passed my test first time thanks to AAA Driving School! The instructor was patient, 
+              "I passed my test first time thanks to Drive with AAA! The instructor was patient, 
               professional, and really helped build my confidence. Highly recommend!" - Sarah M.
             </blockquote>
             <blockquote className="italic text-gray-700 bg-white p-6 rounded-xl shadow-md border-l-4 border-brand">
