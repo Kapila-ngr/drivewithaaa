@@ -1,10 +1,16 @@
 const Hero = () => {
   return (
     <section id="hero" className="relative py-32 lg:py-40 px-4 overflow-hidden">
-      {/* Background Image with Overlay */}
+      {/* Background Image with Overlay - Optimized loading */}
       <div 
-        className="absolute inset-0 bg-cover bg-top bg-no-repeat"
-        style={{ backgroundImage: 'url(/assets/hero.png)' }}
+        className="absolute inset-0 bg-cover bg-top bg-no-repeat will-change-transform"
+        style={{ 
+          backgroundImage: 'url(/assets/hero.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'top center'
+        }}
+        role="img"
+        aria-label="Hero background"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-red-50/85 to-white/90"></div>
       </div>
