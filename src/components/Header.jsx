@@ -36,7 +36,16 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between py-5 gap-5">
           <a href="#hero" className="flex items-center gap-3" onClick={(e) => handleLinkClick(e, '#hero')}>
-            <img src="/assets/logo-v1.png" alt="Drive with AAA Logo" className="h-16 sm:h-20 lg:h-32 w-auto mt-1" />
+            <img 
+              src="/assets/logo-v1.png" 
+              alt="Drive with AAA Logo" 
+              className="h-16 sm:h-20 lg:h-32 w-auto mt-1" 
+              fetchpriority="high"
+              loading="eager"
+              decoding="async"
+              width="auto"
+              height="128"
+            />
           </a>
           
           <button 

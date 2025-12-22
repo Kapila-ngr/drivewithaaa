@@ -4,11 +4,123 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="/assets/logo-v1.png" as="image" type="image/png" />
+    <link rel="preload" href="/assets/hero.png" as="image" type="image/png" />
+    
+    <!-- SEO: Sitemap and Canonical URL -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+    <link rel="canonical" href="https://drivewithaaa.com/" />
     <meta name="description" content="Drive with AAA - Professional driving instruction in Sheffield and Rotherham. Expert ADI-approved instructors with high pass rates." />
     <meta name="keywords" content="driving school, Sheffield, Rotherham, driving lessons, ADI instructor, manual lessons, automatic lessons" />
     <meta property="og:title" content="Drive with AAA - Sheffield & Rotherham" />
     <meta property="og:description" content="Professional driving instruction with expert ADI-approved instructors. High pass rates and flexible scheduling." />
+    <meta property="og:url" content="https://drivewithaaa.com/" />
     <meta property="og:type" content="website" />
+    
+    <!-- Enhanced Structured Data for Search Engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Drive with AAA",
+      "alternateName": "AAA Driving School",
+      "url": "https://drivewithaaa.com",
+      "logo": "https://drivewithaaa.com/assets/logo-v1.png",
+      "description": "Professional driving instruction in Sheffield and Rotherham. Expert ADI-approved instructors with high pass rates.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Sheffield",
+        "addressRegion": "South Yorkshire",
+        "addressCountry": "UK"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Sheffield"
+        },
+        {
+          "@type": "City",
+          "name": "Rotherham"
+        }
+      ],
+      "serviceType": [
+        "Driving Lessons",
+        "Manual Driving Lessons",
+        "Automatic Driving Lessons",
+        "Intensive Driving Courses",
+        "Advanced Driving Training"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "GBP"
+        }
+      },
+      "sameAs": [
+        "https://drivewithaaa.com"
+      ]
+    }
+    </script>
+    
+    <!-- BreadcrumbList for better navigation understanding -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://drivewithaaa.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://drivewithaaa.com/#about"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Lessons",
+          "item": "https://drivewithaaa.com/#lessons"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Pricing",
+          "item": "https://drivewithaaa.com/#pricing"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Contact",
+          "item": "https://drivewithaaa.com/#contact"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Load fonts asynchronously with optimal display -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
+    </noscript>
+    
+    <!-- Inline critical CSS to prevent render blocking -->
+    <style>
+      html{scroll-behavior:smooth;scroll-padding-top:90px}body{font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;margin:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}#root{min-height:100vh}
+    </style>
+    
     <title>Drive with AAA - Sheffield & Rotherham</title>
   </head>
   <body>

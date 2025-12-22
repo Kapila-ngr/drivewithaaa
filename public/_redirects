@@ -1,0 +1,16 @@
+# Redirect all traffic to primary domain (for Netlify)
+# Force HTTPS and remove www subdomain
+https://www.drivewithaaa.com/* https://drivewithaaa.com/:splat 301!
+http://drivewithaaa.com/* https://drivewithaaa.com/:splat 301!
+http://www.drivewithaaa.com/* https://drivewithaaa.com/:splat 301!
+
+# Handle trailing slashes - redirect to non-trailing slash
+/*/ /:splat 301!
+
+# Handle common URL variations
+/index.html / 301!
+/home /  301!
+/Home /  301!
+
+# SPA fallback - must be last
+/* /index.html 200

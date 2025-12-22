@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap - Drive with AAA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #fff 0%, #fee2e2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #ef4444;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+        .sitemap-list {
+            list-style: none;
+        }
+        .sitemap-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: #f9fafb;
+            border-radius: 12px;
+            border-left: 4px solid #ef4444;
+            transition: all 0.3s ease;
+        }
+        .sitemap-item:hover {
+            background: #fee2e2;
+            transform: translateX(5px);
+        }
+        .sitemap-link {
+            color: #111827;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .sitemap-link:hover {
+            color: #ef4444;
+        }
+        .sitemap-link::before {
+            content: "→";
+            color: #ef4444;
+            font-weight: bold;
+        }
+        .description {
+            color: #666;
+            margin-top: 8px;
+            font-size: 0.9rem;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #f3f4f6;
+            text-align: center;
+            color: #666;
+        }
+        .footer a {
+            color: #ef4444;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .back-home {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .back-home:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(239, 68, 68, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📍 Sitemap</h1>
+        <p class="subtitle">Navigate all pages of Drive with AAA</p>
+        
+        <ul class="sitemap-list">
+            <li class="sitemap-item">
+                <a href="/" class="sitemap-link">Home</a>
+                <p class="description">Welcome to Drive with AAA - Your journey to safe driving starts here</p>
+            </li>
+            <li class="sitemap-item">
+                <a href="/#about" class="sitemap-link">About Us</a>
+                <p class="description">Learn about our expert ADI-approved instructors and 15+ years of experience</p>
+            </li>
+            <li class="sitemap-item">
+                <a href="/#lessons" class="sitemap-link">Driving Lessons</a>
+                <p class="description">Explore our range of manual, automatic, intensive courses, and advanced training</p>
+            </li>
+            <li class="sitemap-item">
+                <a href="/#results" class="sitemap-link">Results & Testimonials</a>
+                <p class="description">See our impressive pass rates and hear from satisfied students</p>
+            </li>
+            <li class="sitemap-item">
+                <a href="/#pricing" class="sitemap-link">Pricing</a>
+                <p class="description">Transparent pricing for all our driving lesson packages</p>
+            </li>
+            <li class="sitemap-item">
+                <a href="/#blog" class="sitemap-link">Blog & Tips</a>
+                <p class="description">Driving tips, road safety advice, and latest news</p>
+            </li>
+            <li class="sitemap-item">
+                <a href="/#contact" class="sitemap-link">Contact Us</a>
+                <p class="description">Get in touch to book your first lesson or ask questions</p>
+            </li>
+        </ul>
+
+        <div class="footer">
+            <p>For search engines: <a href="/sitemap.xml" target="_blank">XML Sitemap</a></p>
+            <a href="/" class="back-home">← Back to Homepage</a>
+        </div>
+    </div>
+</body>
+</html>

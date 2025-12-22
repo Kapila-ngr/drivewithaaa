@@ -1,0 +1,29 @@
+# Sitemap
+Sitemap: https://drivewithaaa.com/sitemap.xml
+
+# Allow all bots to crawl the site
+User-agent: *
+Allow: /
+
+# Optimize crawl rate for major search engines
+User-agent: Googlebot
+Crawl-delay: 0
+
+User-agent: Bingbot
+Crawl-delay: 0
+
+# Disallow crawling of build artifacts and config files
+Disallow: /*.json$
+Disallow: /*.map$
+Disallow: /node_modules/
+Disallow: /dist/
+Disallow: /.git/
+
+# Prioritize important pages
+Allow: /assets/
+
+# Exclude common files that shouldn't be indexed
+Disallow: /favicon.svg
+Disallow: /sw.js
+Disallow: /_redirects
+Disallow: /vercel.json
