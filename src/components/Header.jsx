@@ -40,10 +40,9 @@ const Header = () => {
               src="/assets/logo-v1.png" 
               alt="Drive with AAA Logo" 
               className="h-16 sm:h-20 lg:h-32 w-auto mt-1" 
-              fetchpriority="high"
+              fetchPriority="high"
               loading="eager"
               decoding="async"
-              width="auto"
               height="128"
             />
           </a>
@@ -82,7 +81,7 @@ const Header = () => {
                 </ul>
               </li>
               <li><a href="#results" className="block py-3.5 px-4 text-gray-700 hover:text-brand hover:bg-brand-light rounded-xl font-medium transition-all" onClick={(e) => handleLinkClick(e, '#results')}>Results</a></li>
-              <li><a href="#pricing" className="block py-3.5 px-4 text-gray-700 hover:text-brand hover:bg-brand-light rounded-xl font-medium transition-all" onClick={(e) => handleLinkClick(e, '#pricing')}>Pricing</a></li>
+              <li><a href="#pricing" className="block py-3.5 px-4 text-gray-700 hover:text-brand hover:bg-brand-light rounded-xl font-medium transition-all" onClick={(e) => handleLinkClick(e, '#pricing')}>Packages</a></li>
               <li><a href="#blog" className="block py-3.5 px-4 text-gray-700 hover:text-brand hover:bg-brand-light rounded-xl font-medium transition-all" onClick={(e) => handleLinkClick(e, '#blog')}>Blog</a></li>
               <li className="lg:ml-2 mt-2 lg:mt-0"><a href="#contact" className="block py-3.5 px-6 bg-gradient-to-br from-brand to-accent text-white rounded-xl font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all" onClick={(e) => handleLinkClick(e, '#contact')}>Contact</a></li>
             </ul>

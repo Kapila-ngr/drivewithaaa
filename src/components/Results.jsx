@@ -3,7 +3,43 @@ import { useState, useEffect, useRef } from 'react';
 const Results = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [key, setKey] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [tileIndices, setTileIndices] = useState(() => {
+    // Pick 6 unique random indices from gallery
+    const indices = [];
+    const available = Array.from({ length: 23 }, (_, i) => i); // 23 photos total
+    for (let i = 0; i < 6; i++) {
+      const randomIdx = Math.floor(Math.random() * available.length);
+      indices.push(available[randomIdx]);
+      available.splice(randomIdx, 1);
+    }
+    return indices;
+  });
   const sectionRef = useRef(null);
+
+  const gallery = [
+    '/assets/images/1.png',
+    '/assets/images/2.jpeg',
+    '/assets/images/3.jpeg',
+    '/assets/images/4.jpeg',
+    '/assets/images/5.jpeg',
+    '/assets/images/6.jpeg',
+    '/assets/images/7.jpeg',
+    '/assets/images/8.jpeg',
+    '/assets/images/9.jpeg',
+    '/assets/images/10.jpeg',
+    '/assets/images/11.jpeg',
+    '/assets/images/12.jpeg',
+    '/assets/images/13.jpeg',
+    '/assets/images/14.jpeg',
+    '/assets/images/15.jpeg',
+    '/assets/images/16.jpeg',
+    '/assets/images/17.jpeg',
+    '/assets/images/18.jpeg',
+    '/assets/images/19.jpeg',
+    '/assets/images/20.jpeg',
+    '/assets/images/21.jpeg'
+  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -36,6 +72,26 @@ const Results = () => {
       window.removeEventListener('hashchange', handleHashChange);
     };
   }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
+    const id = setInterval(() => {
+      setTileIndices((prev) => {
+        const next = [...prev];
+        const tileToChange = Math.floor(Math.random() * next.length);
+        
+        // Find a new unique index not currently shown
+        let newIndex;
+        do {
+          newIndex = Math.floor(Math.random() * gallery.length);
+        } while (next.includes(newIndex));
+        
+        next[tileToChange] = newIndex;
+        return next;
+      });
+    }, 2400);
+    return () => clearInterval(id);
+  }, [isVisible, gallery.length]);
 
   const stats = [
     { 
@@ -86,8 +142,42 @@ const Results = () => {
         <p className={`text-center max-w-3xl mx-auto mb-12 text-gray-600 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           We take pride in our students' success. Here's what our learners have achieved with Drive with AAA.
         </p>
+
+        <div className="grid lg:grid-cols-3 gap-8 items-center mb-16">
+          <div className={`lg:col-span-2 relative aspect-[4/3] w-full max-w-3xl mx-auto overflow-hidden rounded-3xl shadow-2xl bg-white border border-red-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} transition-all duration-1000`}
+               style={{ transitionDelay: '250ms' }}>
+            <div className="absolute inset-0 grid grid-cols-3 grid-rows-2 gap-3 p-3">
+              {Array.from({ length: 6 }).map((_, i) => (
+                <div key={i} className="relative rounded-2xl overflow-hidden bg-gray-100">
+                  <img
+                    key={tileIndices[i]}
+                    src={gallery[tileIndices[i]]}
+                    alt={`Drive with AAA student ${tileIndices[i] + 1}`}
+                    className="w-full h-full object-cover object-top"
+                    loading={i === 0 ? 'eager' : 'lazy'}
+                    decoding="async"
+                    style={{ animation: 'fadeIn 800ms ease-in' }}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className={`bg-white rounded-2xl shadow-xl border border-red-100 p-6 lg:p-8 space-y-4 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} transition-all duration-1000`} style={{ transitionDelay: '400ms' }}>
+            <h3 className="text-2xl font-bold text-gray-900">Success Stories in Photos</h3>
+            <p className="text-gray-600">
+              Real students, real passes. Swipe through our gallery of recent successes from Sheffield and Rotherham.
+            </p>
+            <ul className="space-y-2 text-gray-700">
+              <li className="flex items-start gap-2"><span className="text-brand text-lg">✓</span><span>High pass rates backed by expert ADI instructors</span></li>
+              <li className="flex items-start gap-2"><span className="text-brand text-lg">✓</span><span>Manual & automatic lessons to fit your preference</span></li>
+              <li className="flex items-start gap-2"><span className="text-brand text-lg">✓</span><span>Flexible scheduling for students, workers, and shift staff</span></li>
+            </ul>
+            {/* Controls removed for non-slider gallery */}
+          </div>
+        </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        {/* <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {stats.map((stat, index) => (
             <div key={index} className={`bg-white border-2 border-red-100 rounded-2xl p-8 text-center transition-all duration-700 hover:-translate-y-2 hover:shadow-xl ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'}`} style={{ transitionDelay: `${300 + index * 100}ms` }}>
               <div className="flex justify-center text-brand mb-4">{stat.icon}</div>
@@ -95,7 +185,7 @@ const Results = () => {
               <p className="text-gray-600">{stat.label}</p>
             </div>
           ))}
-        </div>
+        </div> */}
 
         <div className="max-w-4xl mx-auto">
           <h3 className="text-3xl font-bold text-brand mb-8 text-center">Student Testimonials</h3>
@@ -111,6 +201,12 @@ const Results = () => {
           </div>
         </div>
       </div>
+      <style>{`
+        @keyframes fadeIn {
+          from { opacity: 0; transform: scale(1.02); }
+          to { opacity: 1; transform: scale(1); }
+        }
+      `}</style>
     </section>
   );
 };
