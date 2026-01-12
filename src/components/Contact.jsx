@@ -76,14 +76,16 @@ const Contact = () => {
 
         <div className={`text-center transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <a 
-            href="mailto:info@drivewithaaa.co.uk?subject=Driving%20Lesson%20Enquiry" 
+            href="https://wa.me/447743211110?text=Hi%20Drive%20with%20AAA%2C%20I%20would%20like%20to%20book%20a%20driving%20lesson" 
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-brand to-accent text-white text-lg font-semibold rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all"
           >
             Send us a Message
           </a>
 
           <p className="mt-8 text-sm text-gray-600">
-            We typically respond within 24 hours. For urgent enquiries, please call us directly.
+            Message us on WhatsApp for quick responses. We typically reply within the hour.
           </p>
         </div>
       </div>

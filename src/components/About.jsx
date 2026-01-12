@@ -142,7 +142,7 @@ const About = () => {
             </div>
 
             <div className={`bg-gradient-to-br from-brand to-accent rounded-3xl p-8 text-white shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 -translate-x-0' : 'opacity-0 -translate-x-8'}`}>
-              <h3 className="text-2xl font-bold mb-3">15+ Years</h3>
+              <h3 className="text-2xl font-bold mb-3">Many Years</h3>
               <p className="text-white/90">
                 of excellence in driver education across Sheffield and Rotherham
               </p>

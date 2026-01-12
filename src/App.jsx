@@ -50,27 +50,6 @@ function App() {
   return (
     <>
       <Header />
-      {/* Christmas Promotion Banner */}
-      <div className="bg-gradient-to-r from-red-600 via-green-600 to-red-600 text-white py-3 overflow-hidden shadow-lg">
-        <div className="whitespace-nowrap animate-marquee">
-          <span className="inline-block text-lg md:text-xl font-semibold px-4">
-            🎄 The Perfect Christmas Gift! 🎄 Looking for a gift that really makes a difference? Drive with AAA Christmas gift vouchers are now available! 🚗✨ Perfect for new drivers or anyone wanting to build confidence on the road. Message us today to grab a voucher and give the gift of driving this Christmas 🎁
-          </span>
-          <span className="inline-block text-lg md:text-xl font-semibold px-4">
-            🎄 The Perfect Christmas Gift! 🎄 Looking for a gift that really makes a difference? Drive with AAA Christmas gift vouchers are now available! 🚗✨ Perfect for new drivers or anyone wanting to build confidence on the road. Message us today to grab a voucher and give the gift of driving this Christmas 🎁
-          </span>
-        </div>
-      </div>
-      <style>{`
-        @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        .animate-marquee {
-          display: inline-block;
-          animation: marquee 30s linear infinite;
-        }
-      `}</style>
       <main>
         <Hero />
         <About />

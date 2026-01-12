@@ -1,13 +1,4 @@
 const Hero = () => {
-  // Generate snowflakes
-  const snowflakes = Array.from({ length: 50 }, (_, i) => ({
-    id: i,
-    left: Math.random() * 100,
-    animationDuration: 5 + Math.random() * 10,
-    animationDelay: Math.random() * 5,
-    fontSize: 10 + Math.random() * 10
-  }));
-
   return (
     <section id="hero" className="relative py-32 lg:py-40 px-4 overflow-hidden">
       {/* Background Image with Overlay - Optimized loading */}
@@ -22,24 +13,6 @@ const Hero = () => {
         aria-label="Hero background"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-red-50/85 to-white/90"></div>
-      </div>
-      
-      {/* Falling Snow */}
-      <div className="absolute inset-0 pointer-events-none z-[5]">
-        {snowflakes.map((flake) => (
-          <div
-            key={flake.id}
-            className="snowflake"
-            style={{
-              left: `${flake.left}%`,
-              animationDuration: `${flake.animationDuration}s`,
-              animationDelay: `${flake.animationDelay}s`,
-              fontSize: `${flake.fontSize}px`
-            }}
-          >
-            ❄
-          </div>
-        ))}
       </div>
       
       <div className="max-w-7xl mx-auto relative z-10">
@@ -92,7 +65,15 @@ const Hero = () => {
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-brand text-xl">✓</span>
-                <span>Learn at your pace • Train on your schedule • Pass with confidence</span>
+                <span>Learn at your pace </span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-brand text-xl">✓</span>
+                <span>Training completed on schedule</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-brand text-xl">✓</span>
+                <span>Pass with confidence</span>
               </div>
             </div>
           </div>
@@ -100,23 +81,6 @@ const Hero = () => {
       </div>
 
       <style>{`
-        .snowflake {
-          position: absolute;
-          top: -20px;
-          color: rgba(173, 216, 230, 0.9);
-          animation: snowfall linear infinite;
-          text-shadow: 0 0 5px rgba(135, 206, 250, 0.8);
-        }
-        @keyframes snowfall {
-          0% {
-            transform: translateY(0) rotate(0deg);
-            opacity: 1;
-          }
-          100% {
-            transform: translateY(100vh) rotate(360deg);
-            opacity: 0.7;
-          }
-        }
         @keyframes float {
           0%, 100% { transform: translateY(0) rotate(0deg); }
           25% { transform: translateY(-30px) rotate(5deg); }

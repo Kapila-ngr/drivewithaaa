@@ -68,7 +68,7 @@ const Lessons = () => {
           'Preparation for the driving test'
         ],
         features: ['Flexible Scheduling', 'Experienced Instructors', 'Modern Vehicles', 'Test Preparation'],
-        price: 'From £30 per hour'
+        price: 'From £35 per hour'
       }
     },
     {
