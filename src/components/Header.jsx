@@ -39,11 +39,11 @@ const Header = () => {
             <img 
               src="/assets/logo-v1.png" 
               alt="Drive with AAA Logo" 
-              className="h-16 sm:h-20 lg:h-32 w-auto mt-1" 
+              className="h-28 sm:h-24 lg:h-40 w-auto mt-1" 
               fetchPriority="high"
               loading="eager"
               decoding="async"
-              height="128"
+              height="160"
             />
           </a>
           
