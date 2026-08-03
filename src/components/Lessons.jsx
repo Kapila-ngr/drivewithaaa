@@ -68,7 +68,7 @@ const Lessons = () => {
           'Preparation for the driving test'
         ],
         features: ['Flexible Scheduling', 'Experienced Instructors', 'Modern Vehicles', 'Test Preparation'],
-        price: 'From £35 per hour'
+        price: 'From £37.50 per hour'
       }
     },
     {
@@ -90,7 +90,7 @@ const Lessons = () => {
           'Automatic-specific test preparation'
         ],
         features: ['Easier Learning Curve', 'Less Stress', 'Modern Automatics', 'Quick Progress'],
-        price: 'From £35 per hour'
+        price: 'From £40 per hour'
       }
     },
     {
