@@ -21,42 +21,6 @@ const pages = [
     changefreq: 'weekly',
     priority: '1.0',
     lastmod: currentDate
-  },
-  {
-    loc: '/#about',
-    changefreq: 'monthly',
-    priority: '0.9',
-    lastmod: currentDate
-  },
-  {
-    loc: '/#lessons',
-    changefreq: 'monthly',
-    priority: '0.9',
-    lastmod: currentDate
-  },
-  {
-    loc: '/#results',
-    changefreq: 'monthly',
-    priority: '0.8',
-    lastmod: currentDate
-  },
-  {
-    loc: '/#pricing',
-    changefreq: 'monthly',
-    priority: '0.9',
-    lastmod: currentDate
-  },
-  {
-    loc: '/#blog',
-    changefreq: 'weekly',
-    priority: '0.7',
-    lastmod: currentDate
-  },
-  {
-    loc: '/#contact',
-    changefreq: 'monthly',
-    priority: '0.8',
-    lastmod: currentDate
   }
 ];
 
