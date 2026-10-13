@@ -10,6 +10,8 @@ const Contact = () => {
     startDate: '',
     availability: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submissionMessage, setSubmissionMessage] = useState('');
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -56,19 +58,43 @@ const Contact = () => {
     setEnquiry(previous => ({ ...previous, [name]: value }));
   };
 
-  const handleEnquirySubmit = (event) => {
+  const handleEnquirySubmit = async (event) => {
     event.preventDefault();
+    setIsSubmitting(true);
+    setSubmissionMessage('');
 
-    const subject = `Driving lesson enquiry from ${enquiry.name}`;
-    const body = [
-      `Name: ${enquiry.name}`,
-      `Postcode: ${enquiry.postcode}`,
-      `Lesson type: ${enquiry.lessonType}`,
-      `Preferred start date: ${enquiry.startDate}`,
-      `Availability for lessons: ${enquiry.availability}`
-    ].join('\n');
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/info@drivewithaaa.co.uk', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          ...enquiry,
+          _subject: `Driving lesson enquiry from ${enquiry.name}`,
+          _captcha: 'false',
+          _template: 'table'
+        })
+      });
 
-    window.location.href = `mailto:info@drivewithaaa.co.uk?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      if (!response.ok) {
+        throw new Error('The enquiry could not be sent.');
+      }
+
+      setSubmissionMessage('Thank you. Your enquiry has been sent successfully.');
+      setEnquiry({
+        name: '',
+        postcode: '',
+        lessonType: 'Manual lessons',
+        startDate: '',
+        availability: ''
+      });
+    } catch {
+      setSubmissionMessage('Sorry, your enquiry could not be sent. Please try again or contact us by phone.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -120,7 +146,7 @@ const Contact = () => {
         >
           <h3 className="text-2xl font-bold text-gray-900 mb-3">Send an Enquiry</h3>
           <p className="text-gray-600 mb-6">
-            Complete the form and your email app will prepare an enquiry for our team.
+            Complete the form and your enquiry will be sent directly to our team.
           </p>
 
           <div className="grid md:grid-cols-2 gap-5">
@@ -198,11 +224,21 @@ const Contact = () => {
             </label>
           </div>
 
+          {submissionMessage && (
+            <p
+              role="status"
+              className={`mt-5 text-center font-medium ${submissionMessage.startsWith('Thank you') ? 'text-green-700' : 'text-red-700'}`}
+            >
+              {submissionMessage}
+            </p>
+          )}
+
           <button
             type="submit"
+            disabled={isSubmitting}
             className="mt-6 w-full rounded-xl bg-gradient-to-r from-brand to-accent px-6 py-3 text-lg font-semibold text-white shadow-lg transition-all hover:-translate-y-0.5 hover:shadow-xl"
           >
-            Send Enquiry by Email
+            {isSubmitting ? 'Sending Enquiry...' : 'Send Enquiry'}
           </button>
         </form>
 
