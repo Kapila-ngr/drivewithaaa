@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
-    // Optimize chunk splitting
+    // Optimise chunk splitting
     rollupOptions: {
       output: {
         manualChunks: {
@@ -15,7 +15,7 @@ export default defineConfig({
     },
     // Enable CSS code splitting
     cssCodeSplit: true,
-    // Optimize bundle size
+    // Optimise bundle size
     minify: 'terser',
     terserOptions: {
       compress: {
@@ -24,7 +24,7 @@ export default defineConfig({
       },
     },
   },
-  // Optimize dependencies
+  // Optimise dependencies
   optimizeDeps: {
     include: ['react', 'react-dom'],
   },

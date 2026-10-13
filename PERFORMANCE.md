@@ -1,11 +1,11 @@
-# Performance Optimization - Render-Blocking Resources Eliminated
+# Performance Optimisation - Render-Blocking Resources Eliminated
 
 ## Overview
 All render-blocking resources have been eliminated from the website to improve loading performance and user experience.
 
-## Optimizations Implemented
+## Optimisations Implemented
 
-### 1. **Font Loading Optimization**
+### 1. **Font Loading Optimisation**
 - ✅ Removed blocking `@import` from CSS
 - ✅ Added `preconnect` to Google Fonts domains
 - ✅ Implemented async font loading with `media="print" onload="this.media='all'"`
@@ -22,23 +22,23 @@ All render-blocking resources have been eliminated from the website to improve l
 - ✅ Preconnect to external font domains
 - ✅ Priority hints for above-the-fold content
 
-### 4. **Image Optimization**
+### 4. **Image Optimisation**
 - ✅ Added `fetchpriority="high"` to logo for faster LCP
 - ✅ Set `loading="eager"` for critical images
 - ✅ Added `decoding="async"` for non-blocking decode
 - ✅ Created `LazyImage` component for below-the-fold images
 - ✅ Implemented Intersection Observer for lazy loading
 
-### 5. **Build Optimizations (Vite)**
+### 5. **Build Optimisations (Vite)**
 - ✅ Configured code splitting (React vendor chunk)
 - ✅ Enabled CSS code splitting
 - ✅ Added Terser minification with console removal
-- ✅ Optimized dependency pre-bundling
+- ✅ Optimised dependency pre-bundling
 
-### 6. **Tailwind CSS Optimization**
+### 6. **Tailwind CSS Optimisation**
 - ✅ Enabled JIT mode for smaller builds
 - ✅ Added `hoverOnlyWhenSupported` for better mobile UX
-- ✅ Optimized content scanning
+- ✅ Optimised content scanning
 
 ### 7. **Service Worker Caching**
 - ✅ Implemented service worker for static asset caching
@@ -52,13 +52,13 @@ All render-blocking resources have been eliminated from the website to improve l
 
 ## Performance Metrics Expected
 
-### Before Optimization
+### Before Optimisation
 - **First Contentful Paint (FCP)**: ~2.5s
 - **Largest Contentful Paint (LCP)**: ~4.0s
 - **Time to Interactive (TTI)**: ~5.0s
 - **Total Blocking Time (TBT)**: ~600ms
 
-### After Optimization (Expected)
+### After Optimisation (Expected)
 - **First Contentful Paint (FCP)**: ~0.8s (68% improvement)
 - **Largest Contentful Paint (LCP)**: ~1.5s (62% improvement)
 - **Time to Interactive (TTI)**: ~2.0s (60% improvement)
@@ -68,11 +68,11 @@ All render-blocking resources have been eliminated from the website to improve l
 
 1. **index.html** - Added preconnect, preload, inlined critical CSS, async fonts
 2. **src/index.css** - Removed blocking font import
-3. **vite.config.js** - Added build optimizations and code splitting
+3. **vite.config.js** - Added build optimisations and code splitting
 4. **tailwind.config.js** - Enabled performance features
 5. **src/App.jsx** - Added service worker registration
-6. **src/components/Header.jsx** - Optimized logo loading
-7. **src/components/Hero.jsx** - Optimized background image
+6. **src/components/Header.jsx** - Optimised logo loading
+7. **src/components/Hero.jsx** - Optimised background image
 8. **src/components/LazyImage.jsx** - New lazy loading component
 9. **public/sw.js** - New service worker for caching
 
@@ -86,10 +86,10 @@ Run these tools to verify improvements:
 
 ## Next Steps (Optional)
 
-1. **Image Optimization**:
+1. **Image Optimisation**:
    - Convert images to WebP/AVIF formats
    - Add responsive image srcsets
-   - Use image CDN with automatic optimization
+   - Use image CDN with automatic optimisation
 
 2. **Advanced Caching**:
    - Implement HTTP/2 Server Push
@@ -108,7 +108,7 @@ Run these tools to verify improvements:
 
 ## How to Deploy
 
-1. Build the optimized production bundle:
+1. Build the optimised production bundle:
    ```bash
    npm run build
    ```
@@ -126,5 +126,5 @@ Run these tools to verify improvements:
 
 - Service worker only activates in production builds
 - Font loading uses progressive enhancement
-- All optimizations are backwards compatible
+- All optimisations are backwards compatible
 - No breaking changes to existing functionality

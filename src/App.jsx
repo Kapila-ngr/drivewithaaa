@@ -32,7 +32,7 @@ function App() {
     }
     ogUrl.setAttribute('content', canonicalUrl || 'https://drivewithaaa.com')
     
-    // Register service worker for performance optimization
+    // Register service worker for performance optimisation
     if ('serviceWorker' in navigator && import.meta.env.PROD) {
       window.addEventListener('load', () => {
         navigator.serviceWorker

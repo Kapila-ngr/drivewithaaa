@@ -1,7 +1,7 @@
 const Hero = () => {
   return (
     <section id="hero" className="relative py-32 lg:py-40 px-4 overflow-hidden">
-      {/* Background Image with Overlay - Optimized loading */}
+      {/* Background Image with Overlay - Optimised loading */}
       <div 
         className="absolute inset-0 bg-cover bg-top bg-no-repeat will-change-transform"
         style={{ 
@@ -25,8 +25,7 @@ const Hero = () => {
               Drive with AAA
             </h1>
             <p className="text-gray-600 text-lg lg:text-xl max-w-2xl mb-8 animate-fadeIn animation-delay-400">
-              Professional driving instruction in Sheffield and Rotherham. 
-              Expert ADI-approved instructors with high pass rates.
+              Helping learners across Sheffield, Rotherham, Barnsley and Chesterfield learn to drive with confidence. Friendly, professional tuition from experienced DVSA Approved Driving Instructors.
             </p>
             <a 
               href="#contact" 

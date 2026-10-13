@@ -5,7 +5,7 @@ Sitemap: https://drivewithaaa.com/sitemap.xml
 User-agent: *
 Allow: /
 
-# Optimize crawl rate for major search engines
+# Optimise crawl rate for major search engines
 User-agent: Googlebot
 Crawl-delay: 0
 
@@ -19,7 +19,7 @@ Disallow: /node_modules/
 Disallow: /dist/
 Disallow: /.git/
 
-# Prioritize important pages
+# Prioritise important pages
 Allow: /assets/
 
 # Exclude common files that shouldn't be indexed

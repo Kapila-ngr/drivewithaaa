@@ -17,7 +17,7 @@ export default {
     },
   },
   plugins: [],
-  // Optimize build performance
+  // Optimise build performance
   future: {
     hoverOnlyWhenSupported: true,
   },
