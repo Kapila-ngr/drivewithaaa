@@ -85,7 +85,7 @@ const Lessons = () => {
         includes: [
           'Smooth acceleration and braking',
           'Road safety and hazard perception',
-          'Parking and maneuvering',
+          'Parking and manoeuvring',
           'Motorway driving (if applicable)',
           'Automatic-specific test preparation'
         ],
@@ -101,11 +101,11 @@ const Lessons = () => {
         </svg>
       ),
       title: 'Intensive Courses',
-      description: 'Fast-track your driving test with our intensive programs',
+      description: 'Fast-track your driving test with our intensive programmes',
       details: {
         intro: 'Need to pass your test quickly? Our intensive courses are designed to get you test-ready in the shortest possible time with concentrated lessons over a few weeks.',
         includes: [
-          'Customized course duration (1-2 weeks)',
+          'Customised course duration (1-2 weeks)',
           'Multiple lessons per day',
           'Fast-track test booking',
           'Comprehensive test preparation',

@@ -1,7 +1,7 @@
 # SEO & Sitemap Implementation
 
 ## Overview
-Comprehensive SEO optimization with sitemap, robots.txt, and enhanced structured data for better search engine indexing.
+Comprehensive SEO optimisation with sitemap, robots.txt, and enhanced structured data for better search engine indexing.
 
 ## Files Created/Updated
 
@@ -159,7 +159,7 @@ Update the sitemap when you:
 ### Improved Crawling
 - Search engines discover all pages quickly
 - Proper priority hints guide crawler focus
-- Change frequency helps optimize crawl budget
+- Change frequency helps optimise crawl budget
 
 ### Better Indexing
 - All important pages indexed
@@ -168,8 +168,8 @@ Update the sitemap when you:
 
 ### Enhanced Visibility
 - Location-based targeting (Sheffield, Rotherham)
-- Service type categorization
-- Organization information for knowledge panels
+- Service type categorisation
+- Organisation information for knowledge panels
 
 ## Expected Impact
 
@@ -249,5 +249,5 @@ curl https://drivewithaaa.com/robots.txt
 - Sitemap is automatically generated during build process
 - Last modification dates are automatically updated
 - All URLs use canonical domain (https://drivewithaaa.com)
-- Single Page Application (SPA) with anchor navigation optimized
+- Single Page Application (SPA) with anchor navigation optimised
 - Structured data validates against Schema.org standards

@@ -1,4 +1,4 @@
-// Service Worker for caching and performance optimization
+// Service Worker for caching and performance optimisation
 const CACHE_NAME = 'drivewithaaa-v1'
 const STATIC_CACHE = [
   '/',
