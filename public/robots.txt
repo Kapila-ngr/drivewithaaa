@@ -1,5 +1,5 @@
 # Sitemap
-Sitemap: https://drivewithaaa.com/sitemap.xml
+Sitemap: https://www.drivewithaaa.co.uk/sitemap.xml
 
 # Allow all bots to crawl the site
 User-agent: *

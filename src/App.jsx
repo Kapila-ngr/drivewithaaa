@@ -12,7 +12,7 @@ import Footer from './components/Footer'
 function App() {
   useEffect(() => {
     // Ensure canonical URL is set dynamically
-    const canonicalUrl = 'https://drivewithaaa.com' + window.location.pathname.replace(/\/$/, '')
+    const canonicalUrl = 'https://www.drivewithaaa.co.uk' + window.location.pathname.replace(/\/$/, '')
     let canonicalLink = document.querySelector('link[rel="canonical"]')
     
     if (!canonicalLink) {
@@ -21,7 +21,7 @@ function App() {
       document.head.appendChild(canonicalLink)
     }
     
-    canonicalLink.setAttribute('href', canonicalUrl || 'https://drivewithaaa.com')
+    canonicalLink.setAttribute('href', canonicalUrl || 'https://www.drivewithaaa.co.uk')
     
     // Update Open Graph URL
     let ogUrl = document.querySelector('meta[property="og:url"]')
@@ -30,7 +30,7 @@ function App() {
       ogUrl.setAttribute('property', 'og:url')
       document.head.appendChild(ogUrl)
     }
-    ogUrl.setAttribute('content', canonicalUrl || 'https://drivewithaaa.com')
+    ogUrl.setAttribute('content', canonicalUrl || 'https://www.drivewithaaa.co.uk')
     
     // Register service worker for performance optimisation
     if ('serviceWorker' in navigator && import.meta.env.PROD) {

@@ -1,8 +1,8 @@
 # Redirect all traffic to primary domain (for Netlify)
 # Force HTTPS and remove www subdomain
-https://www.drivewithaaa.com/* https://drivewithaaa.com/:splat 301!
-http://drivewithaaa.com/* https://drivewithaaa.com/:splat 301!
-http://www.drivewithaaa.com/* https://drivewithaaa.com/:splat 301!
+https://drivewithaaa.co.uk/* https://www.drivewithaaa.co.uk/:splat 301!
+http://drivewithaaa.co.uk/* https://www.drivewithaaa.co.uk/:splat 301!
+http://www.drivewithaaa.co.uk/* https://www.drivewithaaa.co.uk/:splat 301!
 
 # Handle trailing slashes - redirect to non-trailing slash
 /*/ /:splat 301!

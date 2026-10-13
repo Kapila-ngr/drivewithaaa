@@ -38,7 +38,7 @@ Crawler instructions for search engine bots.
 ```
 User-agent: *
 Allow: /
-Sitemap: https://drivewithaaa.com/sitemap.xml
+Sitemap: https://www.drivewithaaa.co.uk/sitemap.xml
 ```
 
 ### 3. **Sitemap Generator (`scripts/generate-sitemap.js`)**
@@ -66,7 +66,7 @@ Comprehensive Schema.org markup for rich search results.
 {
   "@type": "EducationalOrganization",
   "name": "Drive with AAA",
-  "url": "https://drivewithaaa.com",
+  "url": "https://www.drivewithaaa.co.uk",
   "logo": "...",
   "address": {...},
   "areaServed": ["Sheffield", "Rotherham"],
@@ -96,21 +96,21 @@ Enhanced HTML head with sitemap reference:
 
 ### Google Search Console
 1. Go to: https://search.google.com/search-console
-2. Add property: `https://drivewithaaa.com`
-3. Submit sitemap: `https://drivewithaaa.com/sitemap.xml`
+2. Add property: `https://www.drivewithaaa.co.uk`
+3. Submit sitemap: `https://www.drivewithaaa.co.uk/sitemap.xml`
 4. Request indexing for important pages
 
 ### Bing Webmaster Tools
 1. Go to: https://www.bing.com/webmasters
-2. Add site: `https://drivewithaaa.com`
-3. Submit sitemap: `https://drivewithaaa.com/sitemap.xml`
+2. Add site: `https://www.drivewithaaa.co.uk`
+3. Submit sitemap: `https://www.drivewithaaa.co.uk/sitemap.xml`
 
 ## Verification Checklist
 
 After deployment, verify:
 
-- [ ] Sitemap accessible at: `https://drivewithaaa.com/sitemap.xml`
-- [ ] Robots.txt accessible at: `https://drivewithaaa.com/robots.txt`
+- [ ] Sitemap accessible at: `https://www.drivewithaaa.co.uk/sitemap.xml`
+- [ ] Robots.txt accessible at: `https://www.drivewithaaa.co.uk/robots.txt`
 - [ ] Validate sitemap: https://www.xml-sitemaps.com/validate-xml-sitemap.html
 - [ ] Test structured data: https://search.google.com/test/rich-results
 - [ ] Check robots.txt: https://www.google.com/webmasters/tools/robots-testing-tool
@@ -231,10 +231,10 @@ npm run build
 npm run preview
 
 # Validate sitemap online
-curl https://drivewithaaa.com/sitemap.xml | xmllint --format -
+curl https://www.drivewithaaa.co.uk/sitemap.xml | xmllint --format -
 
 # Check robots.txt
-curl https://drivewithaaa.com/robots.txt
+curl https://www.drivewithaaa.co.uk/robots.txt
 ```
 
 ## Support Resources
@@ -248,6 +248,6 @@ curl https://drivewithaaa.com/robots.txt
 
 - Sitemap is automatically generated during build process
 - Last modification dates are automatically updated
-- All URLs use canonical domain (https://drivewithaaa.com)
+- All URLs use canonical domain (https://www.drivewithaaa.co.uk)
 - Single Page Application (SPA) with anchor navigation optimised
 - Structured data validates against Schema.org standards
