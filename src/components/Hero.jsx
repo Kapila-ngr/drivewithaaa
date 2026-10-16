@@ -39,40 +39,62 @@ const Hero = () => {
             </a>
           </div>
 
-          <div className="bg-white/90 rounded-2xl shadow-2xl border border-red-100 p-8 backdrop-blur-sm animate-fadeIn animation-delay-400">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Drive with AAA?</h3>
-            <div className="grid grid-cols-1 gap-3 text-gray-700">
-              <div className="flex items-start gap-3">
-                <span className="text-brand text-xl">✓</span>
-                <span>Flexible training hours (early morning to late night)</span>
+          <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-8 bg-white/40 rounded-3xl shadow-2xl border border-white/70 p-5 sm:p-8 backdrop-blur-xl animate-fadeIn animation-delay-400">
+            <div className="flex flex-col justify-center">
+              <p className="text-brand font-semibold uppercase tracking-[0.2em] text-sm mb-3">Your success matters</p>
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-5">Why Choose Drive with AAA?</h3>
+              <div className="grid grid-cols-1 gap-3 text-gray-700">
+                <div className="flex items-start gap-3">
+                  <span className="text-brand text-xl">✓</span>
+                  <span>Flexible training hours (early morning to late night)</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-brand text-xl">✓</span>
+                  <span>Student and worker-friendly learning</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-brand text-xl">✓</span>
+                  <span>Manual and automatic lessons</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-brand text-xl">✓</span>
+                  <span>DVSA-approved UK driving instructors</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-brand text-xl">✓</span>
+                  <span>Lessons tailored to your lifestyle</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-brand text-xl">✓</span>
+                  <span>Learn at your pace</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-brand text-xl">✓</span>
+                  <span>Training completed on schedule</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-brand text-xl">✓</span>
+                  <span>Pass with confidence</span>
+                </div>
               </div>
-              <div className="flex items-start gap-3">
-                <span className="text-brand text-xl">✓</span>
-                <span>Student and worker-friendly learning</span>
+            </div>
+            <div className="flex flex-col">
+              <div className="relative min-h-[280px] lg:min-h-full overflow-hidden rounded-2xl border border-white/80 bg-gray-900/10 shadow-xl">
+                <video
+                  className="absolute inset-0 h-full w-full object-cover"
+                  src="/assets/HeroVdo.mp4"
+                  autoPlay
+                  muted
+                  controls
+                  preload="metadata"
+                  loop
+                  playsInline
+                  aria-label="Drive with AAA driving lesson video"
+                />
               </div>
-              <div className="flex items-start gap-3">
-                <span className="text-brand text-xl">✓</span>
-                <span>Manual and automatic lessons</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-brand text-xl">✓</span>
-                <span>DVSA-approved UK driving instructors</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-brand text-xl">✓</span>
-                <span>Lessons tailored to your lifestyle</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-brand text-xl">✓</span>
-                <span>Learn at your pace </span>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-brand text-xl">✓</span>
-                <span>Training completed on schedule</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-brand text-xl">✓</span>
-                <span>Pass with confidence</span>
+              <div className="pt-4 text-gray-900">
+                {/* <p className="text-lg font-bold">Learn with confidence</p>
+                <p className="text-sm text-gray-600">Professional support from your first lesson to test day.</p> */}
               </div>
             </div>
           </div>

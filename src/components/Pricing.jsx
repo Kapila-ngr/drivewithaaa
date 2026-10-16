@@ -101,28 +101,28 @@ const Pricing = () => {
       ],
       popular: false
     },
-    {
-      title: 'Sheffield Taxi',
-      subtitle: 'Taxi & Private Hire Drivers',
-      features: [
-        'Sheffield taxi driving standards',
-        'Local area knowledge and route training',
-        'Professional passenger driving skills',
-        'Safe night-time and city-centre driving',
-        'Assessment and test preparation support'
-      ],
-      highlights: [
-        'Professional instructor guidance',
-        'Flexible training hours (including nights)',
-        'Local Sheffield expertise'
-      ],
-      idealFor: [
-        'New taxi and private hire drivers',
-        'Existing drivers needing refresher training',
-        'Drivers preparing for Sheffield taxi tests'
-      ],
-      popular: false
-    }
+    // {
+    //   title: 'Sheffield Taxi',
+    //   subtitle: 'Taxi & Private Hire Drivers',
+    //   features: [
+    //     'Sheffield taxi driving standards',
+    //     'Local area knowledge and route training',
+    //     'Professional passenger driving skills',
+    //     'Safe night-time and city-centre driving',
+    //     'Assessment and test preparation support'
+    //   ],
+    //   highlights: [
+    //     'Professional instructor guidance',
+    //     'Flexible training hours (including nights)',
+    //     'Local Sheffield expertise'
+    //   ],
+    //   idealFor: [
+    //     'New taxi and private hire drivers',
+    //     'Existing drivers needing refresher training',
+    //     'Drivers preparing for Sheffield taxi tests'
+    //   ],
+    //   popular: false
+    // }
   ];
 
   return (
@@ -139,7 +139,7 @@ const Pricing = () => {
           Early morning sessions • Evening & late-night lessons • Weekend availability
         </p>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 items-stretch">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 items-stretch max-w-5xl mx-auto">
           {packages.map((pkg, index) => (
             <div 
               key={index} 
