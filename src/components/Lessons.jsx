@@ -1,5 +1,17 @@
 import { useState, useEffect, useRef } from 'react';
 
+const CloseIcon = () => (
+  <svg
+    aria-hidden="true"
+    className="w-5 h-5"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 6l12 12M6 18L18 6" />
+  </svg>
+);
+
 const Lessons = () => {
   const [activeModal, setActiveModal] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -67,8 +79,7 @@ const Lessons = () => {
           'Road positioning and awareness',
           'Preparation for the driving test'
         ],
-        features: ['Flexible Scheduling', 'Experienced Instructors', 'Modern Vehicles', 'Test Preparation'],
-        price: 'From £37.50 per hour'
+        features: ['Flexible Scheduling', 'Experienced Instructors', 'Modern Vehicles', 'Test Preparation']
       }
     },
     {
@@ -89,8 +100,7 @@ const Lessons = () => {
           'Motorway driving (if applicable)',
           'Automatic-specific test preparation'
         ],
-        features: ['Easier Learning Curve', 'Less Stress', 'Modern Automatics', 'Quick Progress'],
-        price: 'From £40 per hour'
+        features: ['Easier Learning Curve', 'Less Stress', 'Modern Automatics', 'Quick Progress']
       }
     },
     {
@@ -111,8 +121,7 @@ const Lessons = () => {
           'Comprehensive test preparation',
           'Mock test sessions'
         ],
-        features: ['Quick Results', 'Focused Learning', 'Test Included', 'High Success Rate'],
-        price: 'Packages from £600'
+        features: ['Quick Results', 'Focused Learning', 'Test Included', 'High Success Rate']
       }
     },
     {
@@ -133,8 +142,7 @@ const Lessons = () => {
           'Night driving practice',
           'Adverse weather condition training'
         ],
-        features: ['Post-Test Training', 'Motorway Skills', 'Defensive Driving', 'Confidence Building'],
-        price: 'From £40 per hour'
+        features: ['Post-Test Training', 'Motorway Skills', 'Defensive Driving', 'Confidence Building']
       }
     }
   ];
@@ -179,10 +187,12 @@ const Lessons = () => {
           <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={closeModal}></div>
           <div className={`relative bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl transform transition-all duration-400 ${activeModal === lesson.id ? 'scale-100 translate-y-0' : 'scale-95 translate-y-10'}`}>
             <button 
-              className="sticky top-4 float-right mr-4 w-9 h-9 bg-gray-100 hover:bg-brand hover:text-white rounded-full text-2xl flex items-center justify-center transition-all hover:rotate-90 z-10"
+              type="button"
+              aria-label={`Close ${lesson.title} details`}
+              className="sticky top-4 float-right mr-4 w-9 h-9 bg-gray-100 hover:bg-brand hover:text-white rounded-full flex items-center justify-center transition-all hover:rotate-90 z-10"
               onClick={closeModal}
             >
-              &times;
+              <CloseIcon />
             </button>
             <div className="p-12">
               <div className="flex justify-center text-brand mb-6">
@@ -203,10 +213,6 @@ const Lessons = () => {
                   <span key={index} className="bg-brand-light text-brand px-4 py-2 rounded-xl text-sm font-medium">{feature}</span>
                 ))}
               </div>
-              
-              <p className="text-2xl font-semibold text-brand text-center mb-6">
-                {lesson.details.price}
-              </p>
               
               <div className="text-center">
                 <a 

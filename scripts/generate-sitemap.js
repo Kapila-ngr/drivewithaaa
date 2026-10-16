@@ -12,7 +12,7 @@ import { dirname, join } from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const baseUrl = 'https://drivewithaaa.com';
+const baseUrl = 'https://www.drivewithaaa.co.uk';
 const currentDate = new Date().toISOString().split('T')[0];
 
 const pages = [
