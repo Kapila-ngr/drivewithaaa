@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Hero = () => {
   return (
     <section id="hero" className="relative py-32 lg:py-40 px-4 overflow-hidden">
@@ -27,16 +29,12 @@ const Hero = () => {
             <p className="text-gray-600 text-lg lg:text-xl max-w-2xl mb-8 animate-fadeIn animation-delay-400">
               Helping learners across Sheffield, Rotherham, Barnsley and Chesterfield learn to drive with confidence. Friendly, professional tuition from experienced DVSA Approved Driving Instructors.
             </p>
-            <a 
-              href="#contact" 
+            <Link 
+              to="/contact" 
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-brand to-accent text-white text-lg font-semibold rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 hover:scale-105"
-              onClick={(e) => {
-                e.preventDefault();
-                document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
-              }}
             >
               Book Your First Lesson
-            </a>
+            </Link>
           </div>
 
           <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-8 bg-white/40 rounded-3xl shadow-2xl border border-white/70 p-5 sm:p-8 backdrop-blur-xl animate-fadeIn animation-delay-400">
