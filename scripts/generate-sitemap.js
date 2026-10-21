@@ -15,14 +15,22 @@ const __dirname = dirname(__filename);
 const baseUrl = 'https://www.drivewithaaa.co.uk';
 const currentDate = new Date().toISOString().split('T')[0];
 
-const pages = [
-  {
-    loc: '/',
-    changefreq: 'weekly',
-    priority: '1.0',
-    lastmod: currentDate
-  }
+const paths = [
+  ['/', '1.0'],
+  ['/lessons', '0.9'],
+  ['/packages', '0.9'],
+  ['/contact', '0.9'],
+  ['/about', '0.8'],
+  ['/results', '0.7'],
+  ['/blog', '0.7']
 ];
+
+const pages = paths.map(([loc, priority]) => ({
+  loc,
+  changefreq: loc === '/' || loc === '/blog' ? 'weekly' : 'monthly',
+  priority,
+  lastmod: currentDate
+}));
 
 function generateSitemap() {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
