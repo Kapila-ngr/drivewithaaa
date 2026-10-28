@@ -5,6 +5,8 @@ const Contact = () => {
   const [key, setKey] = useState(0);
   const [enquiry, setEnquiry] = useState({
     name: '',
+    email: '',
+    contactNumber: '',
     postcode: '',
     lessonType: 'Manual lessons',
     startDate: '',
@@ -85,6 +87,8 @@ const Contact = () => {
       setSubmissionMessage('Thank you. Your enquiry has been sent successfully.');
       setEnquiry({
         name: '',
+        email: '',
+        contactNumber: '',
         postcode: '',
         lessonType: 'Manual lessons',
         startDate: '',
@@ -172,6 +176,33 @@ const Contact = () => {
                 onChange={handleEnquiryChange}
                 required
                 autoComplete="postal-code"
+                className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-brand focus:outline-none focus:ring-2 focus:ring-red-200"
+              />
+            </label>
+
+            <label className="block text-left">
+              <span className="block text-sm font-semibold text-gray-700 mb-2">Your email address</span>
+              <input
+                type="email"
+                name="email"
+                value={enquiry.email}
+                onChange={handleEnquiryChange}
+                required
+                autoComplete="email"
+                className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-brand focus:outline-none focus:ring-2 focus:ring-red-200"
+              />
+            </label>
+
+            <label className="block text-left">
+              <span className="block text-sm font-semibold text-gray-700 mb-2">Your contact number</span>
+              <input
+                type="tel"
+                name="contactNumber"
+                value={enquiry.contactNumber}
+                onChange={handleEnquiryChange}
+                required
+                autoComplete="tel"
+                inputMode="tel"
                 className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-brand focus:outline-none focus:ring-2 focus:ring-red-200"
               />
             </label>
