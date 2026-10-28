@@ -111,7 +111,7 @@ const About = () => {
           </h2>
           <div className="w-24 h-1.5 bg-gradient-to-r from-brand to-accent mx-auto rounded-full mb-8 animate-expandWidth"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Your trusted partner for professional driving instruction in Sheffield and Rotherham
+            Professional Manual &amp; Automatic Driving Lessons in Sheffield, Rotherham, Barnsley &amp; Doncaster
           </p>
         </div>
 
@@ -129,13 +129,13 @@ const About = () => {
                 Our Mission
               </h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                With years of experience and a proven track record, we pride ourselves on delivering high-quality driving instruction 
-                tailored to your individual needs. Our commitment is to create safe, confident drivers who are prepared for a lifetime on the road.
+                At Drive With AAA Driving School, our mission is to provide professional, high quality manual and automatic driving lessons in Sheffield, Rotherham, Barnsley and Doncaster. We are committed to helping learners develop the confidence, road awareness and practical driving skills needed to become safe, responsible drivers for life.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Our DVSA approved driving instructors provide patient, supportive and structured driving instruction tailored to each learner's individual needs, experience and goals. Whether you are a complete beginner or preparing for your practical driving test, we offer driving lessons designed to help you progress with confidence across Sheffield, Rotherham, Barnsley and Doncaster.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Our ADI-approved instructors are patient, professional, and dedicated to helping you succeed. 
-                Whether you're a complete beginner or looking to refine your skills, we offer flexible lesson plans 
-                designed around your schedule and goals.
+                We believe that learning to drive is about more than passing a test. It is about building safe driving habits, making informed decisions on the road and developing the skills to drive independently for years to come.
               </p>
             </div>
 
@@ -172,7 +172,7 @@ const About = () => {
             </svg>
             <div className="text-left">
               <p className="text-sm text-gray-500 font-medium">Serving</p>
-              <p className="text-lg font-bold text-gray-900">Sheffield & Rotherham</p>
+              <p className="text-lg font-bold text-gray-900">Sheffield, Rotherham, Barnsley, Doncaster & Chesterfield</p>
             </div>
           </div>
         </div>

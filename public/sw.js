@@ -1,8 +1,6 @@
 // Service Worker for caching and performance optimisation
-const CACHE_NAME = 'drivewithaaa-v1'
+const CACHE_NAME = 'drivewithaaa-v2'
 const STATIC_CACHE = [
-  '/',
-  '/index.html',
   '/assets/logo-v1.png',
   '/assets/hero.png',
 ]
@@ -35,6 +33,16 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   // Skip non-GET requests
   if (event.request.method !== 'GET') return
+
+  const url = new URL(event.request.url)
+  if (url.origin !== self.location.origin) return
+
+  // Always fetch the app shell from the network so deployments cannot leave
+  // clients running HTML that points to bundles from a previous build.
+  if (event.request.mode === 'navigate' || url.pathname === '/index.html') {
+    event.respondWith(fetch(event.request, { cache: 'no-store' }))
+    return
+  }
 
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {

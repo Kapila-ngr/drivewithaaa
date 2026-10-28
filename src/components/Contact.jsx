@@ -52,7 +52,7 @@ const Contact = () => {
   const contactInfo = [
     { label: 'Phone', value: '+44 7743 211110', href: 'tel:+447743211110' },
     { label: 'Email', value: 'info@drivewithaaa.co.uk', href: 'mailto:info@drivewithaaa.co.uk' },
-    { label: 'Areas Covered', value: 'Sheffield, Rotherham, Barnsley and Chesterfield', href: null }
+    { label: 'Areas Covered', value: 'Sheffield, Rotherham, Barnsley, Doncaster and Chesterfield', href: null }
   ];
 
   const handleEnquiryChange = (event) => {
