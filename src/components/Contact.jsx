@@ -50,7 +50,7 @@ const Contact = () => {
   const contactInfo = [
     { label: 'Phone', value: '+44 7743 211110', href: 'tel:+447743211110' },
     { label: 'Email', value: 'info@drivewithaaa.co.uk', href: 'mailto:info@drivewithaaa.co.uk' },
-    { label: 'Areas Covered', value: 'Sheffield and Rotherham', href: null }
+    { label: 'Areas Covered', value: 'Sheffield, Rotherham, Barnsley and Chesterfield', href: null }
   ];
 
   const handleEnquiryChange = (event) => {
@@ -111,7 +111,7 @@ const Contact = () => {
         </h2>
         <div className="w-16 h-1 bg-gradient-to-r from-brand to-accent mx-auto rounded-full mb-5"></div>
         <p className={`text-center max-w-2xl mx-auto mb-12 text-gray-600 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          Ready to start your driving journey? Contact our Sheffield and Rotherham driving instructors to book your first lesson or ask any questions.
+          Ready to start your driving journey? Contact our driving instructors to ask about lessons in Sheffield, Rotherham, Barnsley and Chesterfield.
         </p>
         
         <div className={`bg-white rounded-2xl shadow-xl p-8 mb-8 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>

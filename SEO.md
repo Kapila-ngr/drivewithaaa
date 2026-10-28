@@ -1,253 +1,46 @@
-# SEO & Sitemap Implementation
+# SEO
 
-## Overview
-Comprehensive SEO optimisation with sitemap, robots.txt, and enhanced structured data for better search engine indexing.
+The site includes search metadata, canonical URLs, a sitemap, crawl instructions, and
+organization structured data. These help search engines understand and discover the
+site; they do not guarantee indexing, rich results, or a particular ranking.
 
-## Files Created/Updated
+## Current setup
 
-### 1. **Sitemap (`public/sitemap.xml`)**
-Standard XML sitemap following the sitemaps.org protocol.
+- Route-specific titles, descriptions, canonical URLs, and Open Graph metadata are
+  maintained in `src/routes.js` and applied by `src/components/Seo.jsx`.
+- The homepage has a location-focused title and heading for driving lessons in
+  Sheffield, Rotherham, and Chesterfield. The site also identifies Barnsley as a
+  service area.
+- `public/sitemap.xml` lists the site's public routes. `npm run build` regenerates it
+  from `scripts/generate-sitemap.js`.
+- `public/robots.txt` allows crawling and points to the sitemap.
+- `index.html` contains the base metadata and organization structured data. Keep
+  business details there accurate and consistent with the visible site.
 
-**Features:**
-- ✅ All major sections included (Home, About, Lessons, Results, Pricing, Blog, Contact)
-- ✅ Priority settings (1.0 for homepage, 0.7-0.9 for other pages)
-- ✅ Change frequency indicators
-- ✅ Last modification dates
-- ✅ Proper XML schema validation
+## After deployment
 
-**URLs Included:**
-- Homepage: Priority 1.0, Weekly updates
-- About: Priority 0.9, Monthly updates
-- Lessons: Priority 0.9, Monthly updates
-- Results: Priority 0.8, Monthly updates
-- Pricing: Priority 0.9, Monthly updates
-- Blog: Priority 0.7, Weekly updates
-- Contact: Priority 0.8, Monthly updates
+1. Verify the canonical domain and confirm that the pages, sitemap, and robots file
+   load successfully over HTTPS.
+2. Verify ownership of `https://www.drivewithaaa.co.uk` in Google Search Console,
+   submit `/sitemap.xml`, and inspect the homepage and important routes for indexing
+   or crawl issues.
+3. Set up or claim the Google Business Profile using the real business details and
+   actual service area. Keep the name, phone, hours, and service-area information
+   consistent wherever the business is listed.
+4. Ask genuine customers for honest reviews and respond to them. Do not offer
+   incentives or post reviews on customers' behalf.
+5. Publish useful, original information about lessons and the areas served. Create
+   a location page only when it can provide genuinely useful, unique details for
+   that area; avoid near-identical pages made only to target keywords.
+6. Monitor Search Console impressions, clicks, queries, and indexing over time.
 
-### 2. **Robots.txt (`public/robots.txt`)**
-Crawler instructions for search engine bots.
+Search results depend on the searcher's location, competition, business prominence,
+site quality, and other factors. No code change or SEO provider can guarantee the
+first result for a search phrase.
 
-**Features:**
-- ✅ Sitemap location declared
-- ✅ All bots allowed to crawl
-- ✅ Zero crawl delay for major search engines (Google, Bing)
-- ✅ Build artifacts and config files excluded
-- ✅ Asset directory explicitly allowed
+## Local validation
 
-**Directives:**
-```
-User-agent: *
-Allow: /
-Sitemap: https://www.drivewithaaa.co.uk/sitemap.xml
-```
-
-### 3. **Sitemap Generator (`scripts/generate-sitemap.js`)**
-Automated Node.js script to generate sitemap dynamically.
-
-**Features:**
-- ✅ Automatic date updates
-- ✅ Configurable pages array
-- ✅ Runs before build
-- ✅ Easy to maintain and extend
-
-**Usage:**
 ```bash
-npm run generate:sitemap  # Generate sitemap manually
-npm run build             # Auto-generates before build
-```
-
-### 4. **Enhanced Structured Data (index.html)**
-Comprehensive Schema.org markup for rich search results.
-
-**Schemas Implemented:**
-
-#### EducationalOrganization Schema
-```json
-{
-  "@type": "EducationalOrganization",
-  "name": "Drive with AAA",
-  "url": "https://www.drivewithaaa.co.uk",
-  "logo": "...",
-  "address": {...},
-  "areaServed": ["Sheffield", "Rotherham"],
-  "serviceType": [...]
-}
-```
-
-#### BreadcrumbList Schema
-```json
-{
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"position": 1, "name": "Home", ...},
-    {"position": 2, "name": "About", ...},
-    ...
-  ]
-}
-```
-
-### 5. **SEO Meta Tags**
-Enhanced HTML head with sitemap reference:
-```html
-<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
-```
-
-## Search Engine Submission
-
-### Google Search Console
-1. Go to: https://search.google.com/search-console
-2. Add property: `https://www.drivewithaaa.co.uk`
-3. Submit sitemap: `https://www.drivewithaaa.co.uk/sitemap.xml`
-4. Request indexing for important pages
-
-### Bing Webmaster Tools
-1. Go to: https://www.bing.com/webmasters
-2. Add site: `https://www.drivewithaaa.co.uk`
-3. Submit sitemap: `https://www.drivewithaaa.co.uk/sitemap.xml`
-
-## Verification Checklist
-
-After deployment, verify:
-
-- [ ] Sitemap accessible at: `https://www.drivewithaaa.co.uk/sitemap.xml`
-- [ ] Robots.txt accessible at: `https://www.drivewithaaa.co.uk/robots.txt`
-- [ ] Validate sitemap: https://www.xml-sitemaps.com/validate-xml-sitemap.html
-- [ ] Test structured data: https://search.google.com/test/rich-results
-- [ ] Check robots.txt: https://www.google.com/webmasters/tools/robots-testing-tool
-- [ ] Submit to Google Search Console
-- [ ] Submit to Bing Webmaster Tools
-
-## Maintenance
-
-### Updating the Sitemap
-
-**Option 1: Automatic (Recommended)**
-The sitemap is automatically regenerated on every build:
-```bash
+npm run lint
 npm run build
 ```
-
-**Option 2: Manual**
-Generate sitemap independently:
-```bash
-npm run generate:sitemap
-```
-
-**Option 3: Edit Script**
-Modify `scripts/generate-sitemap.js` to add/remove pages:
-```javascript
-const pages = [
-  {
-    loc: '/new-page',
-    changefreq: 'monthly',
-    priority: '0.8',
-    lastmod: currentDate
-  }
-];
-```
-
-### When to Update
-
-Update the sitemap when you:
-- ✅ Add new pages or sections
-- ✅ Remove pages
-- ✅ Change content structure
-- ✅ Launch major content updates
-
-## SEO Benefits
-
-### Improved Crawling
-- Search engines discover all pages quickly
-- Proper priority hints guide crawler focus
-- Change frequency helps optimise crawl budget
-
-### Better Indexing
-- All important pages indexed
-- Structured data enables rich snippets
-- Clear site hierarchy with breadcrumbs
-
-### Enhanced Visibility
-- Location-based targeting (Sheffield, Rotherham)
-- Service type categorisation
-- Organisation information for knowledge panels
-
-## Expected Impact
-
-### Short Term (1-4 weeks)
-- ✅ All pages indexed in search engines
-- ✅ Sitemap processed and validated
-- ✅ Crawl errors identified and resolved
-
-### Medium Term (1-3 months)
-- ✅ Improved search rankings for local keywords
-- ✅ Rich snippets in search results
-- ✅ Better click-through rates
-- ✅ Knowledge panel potential
-
-### Long Term (3-6 months)
-- ✅ Established authority for driving lessons in Sheffield/Rotherham
-- ✅ Consistent organic traffic growth
-- ✅ Featured snippets opportunities
-- ✅ Local pack appearances
-
-## Additional Recommendations
-
-### 1. Local SEO
-- [ ] Create Google Business Profile
-- [ ] Add business to local directories
-- [ ] Encourage customer reviews
-- [ ] Add local schema markup
-
-### 2. Content Strategy
-- [ ] Regular blog posts (weekly)
-- [ ] Update sitemap for new blog posts
-- [ ] Create driving tips content
-- [ ] Location-specific landing pages
-
-### 3. Technical SEO
-- [x] Mobile-friendly design
-- [x] Fast loading times
-- [x] HTTPS enabled
-- [x] Clean URL structure
-- [ ] XML sitemap submitted
-- [ ] Monitor Search Console
-
-### 4. Analytics
-- [ ] Set up Google Analytics
-- [ ] Track organic search traffic
-- [ ] Monitor indexing status
-- [ ] Track keyword rankings
-
-## Testing Commands
-
-```bash
-# Generate sitemap
-npm run generate:sitemap
-
-# Build with sitemap generation
-npm run build
-
-# Preview production build
-npm run preview
-
-# Validate sitemap online
-curl https://www.drivewithaaa.co.uk/sitemap.xml | xmllint --format -
-
-# Check robots.txt
-curl https://www.drivewithaaa.co.uk/robots.txt
-```
-
-## Support Resources
-
-- **Sitemap Protocol**: https://www.sitemaps.org/protocol.html
-- **Google Search Central**: https://developers.google.com/search
-- **Schema.org**: https://schema.org/
-- **Robots.txt Spec**: https://www.robotstxt.org/
-
-## Notes
-
-- Sitemap is automatically generated during build process
-- Last modification dates are automatically updated
-- All URLs use canonical domain (https://www.drivewithaaa.co.uk)
-- Single Page Application (SPA) with anchor navigation optimised
-- Structured data validates against Schema.org standards

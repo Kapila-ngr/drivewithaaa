@@ -21,10 +21,10 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           <div className="text-left">
             <p className="text-brand text-xl lg:text-2xl font-semibold mb-4 animate-fadeIn">
-              Your Journey to Safe Driving Starts Here
-            </p>
-            <h1 className="text-5xl lg:text-7xl font-extrabold mb-5 bg-gradient-to-r from-gray-900 to-brand bg-clip-text text-transparent tracking-tight animate-fadeIn animation-delay-200 lg:h-[82px] lg:flex lg:items-center">
               Drive with AAA
+            </p>
+            <h1 className="text-4xl lg:text-6xl font-extrabold mb-5 bg-gradient-to-r from-gray-900 to-brand bg-clip-text text-transparent tracking-tight animate-fadeIn animation-delay-200">
+              Driving School in Sheffield, Rotherham &amp; Chesterfield
             </h1>
             <p className="text-gray-600 text-lg lg:text-xl max-w-2xl mb-8 animate-fadeIn animation-delay-400">
               Helping learners across Sheffield, Rotherham, Barnsley and Chesterfield learn to drive with confidence. Friendly, professional tuition from experienced DVSA Approved Driving Instructors.
