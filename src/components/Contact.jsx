@@ -117,32 +117,6 @@ const Contact = () => {
         <p className={`text-center max-w-2xl mx-auto mb-12 text-gray-600 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           Ready to start your driving journey? Contact our driving instructors to ask about lessons in Sheffield, Rotherham, Barnsley and Chesterfield.
         </p>
-        
-        <div className={`bg-white rounded-2xl shadow-xl p-8 mb-8 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <address className="not-italic">
-            <ul className="space-y-5">
-            {contactInfo.map((info, index) => (
-              <li key={index} className="flex items-start gap-4 text-gray-700">
-                <span className="text-brand font-bold mt-0.5">→</span>
-                <div>
-                  <strong className="font-semibold">{info.label}:</strong>{' '}
-                  {info.href ? (
-                    <a
-                      href={info.href}
-                      aria-label={`${info.label}: ${info.value}`}
-                      className="text-brand hover:text-accent transition-colors"
-                    >
-                      {info.value}
-                    </a>
-                  ) : (
-                    <span>{info.value}</span>
-                  )}
-                </div>
-              </li>
-            ))}
-            </ul>
-          </address>
-        </div>
 
         <form
           onSubmit={handleEnquirySubmit}
@@ -272,6 +246,32 @@ const Contact = () => {
             {isSubmitting ? 'Sending Enquiry...' : 'Send Enquiry'}
           </button>
         </form>
+
+        <div className={`bg-white rounded-2xl shadow-xl p-8 mb-8 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <address className="not-italic">
+            <ul className="space-y-5">
+            {contactInfo.map((info, index) => (
+              <li key={index} className="flex items-start gap-4 text-gray-700">
+                <span className="text-brand font-bold mt-0.5">→</span>
+                <div>
+                  <strong className="font-semibold">{info.label}:</strong>{' '}
+                  {info.href ? (
+                    <a
+                      href={info.href}
+                      aria-label={`${info.label}: ${info.value}`}
+                      className="text-brand hover:text-accent transition-colors"
+                    >
+                      {info.value}
+                    </a>
+                  ) : (
+                    <span>{info.value}</span>
+                  )}
+                </div>
+              </li>
+            ))}
+            </ul>
+          </address>
+        </div>
 
         <div className={`text-center transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <a 

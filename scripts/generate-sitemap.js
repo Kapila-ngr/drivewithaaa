@@ -22,7 +22,8 @@ const paths = [
   ['/contact', '0.9'],
   ['/about', '0.8'],
   ['/results', '0.7'],
-  ['/blog', '0.7']
+  ['/blog', '0.7'],
+  ['/privacy-policy.html', '0.3']
 ];
 
 const pages = paths.map(([loc, priority]) => ({
