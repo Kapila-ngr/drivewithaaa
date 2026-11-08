@@ -1,5 +1,5 @@
 export const routes = [
-  { path: '/', title: 'Driving School in Sheffield, Rotherham & Chesterfield | Drive with AAA', description: "Friendly manual and automatic driving lessons from DVSA-approved instructors in Sheffield, Rotherham, Barnsley and Chesterfield." },
+  { path: '/', title: 'Driving School in Sheffield, Rotherham & Chesterfield | Drive with AAA', description: 'Looking for driving lessons in Sheffield or Rotherham? Learn with Drive with AAA. Explore driving lesson options, meet your instructor and enquire about availability today.' },
   { path: '/about', title: 'About Drive with AAA | Local Driving Instructors', description: 'Meet the DVSA-approved instructors at Drive with AAA, serving learners in Sheffield, Rotherham, Barnsley and Chesterfield.' },
   { path: '/lessons', title: 'Manual & Automatic Driving Lessons | Drive with AAA', description: 'Explore manual and automatic driving lessons with Drive with AAA in Sheffield, Rotherham, Barnsley and Chesterfield.' },
   { path: '/results', title: 'Learner Passes & Reviews | Drive with AAA', description: 'See learner driving test passes and reviews for Drive with AAA instructors serving Sheffield, Rotherham, Barnsley and Chesterfield.' },

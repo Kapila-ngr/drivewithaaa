@@ -102,10 +102,10 @@ const About = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-light rounded-full text-brand text-sm font-semibold mb-4 transform hover:scale-105 transition-transform">
+          {/* <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-light rounded-full text-brand text-sm font-semibold mb-4 transform hover:scale-105 transition-transform">
             <span className="w-2 h-2 bg-brand rounded-full animate-pulse"></span>
             About Us
-          </div>
+          </div> */}
           <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
             Drive with AAA
           </h2>
@@ -129,13 +129,10 @@ const About = () => {
                 Our Mission
               </h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                At Drive With AAA Driving School, our mission is to provide professional, high quality manual and automatic driving lessons in Sheffield, Rotherham, Barnsley and Doncaster. We are committed to helping learners develop the confidence, road awareness and practical driving skills needed to become safe, responsible drivers for life.
-              </p>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                Our DVSA approved driving instructors provide patient, supportive and structured driving instruction tailored to each learner's individual needs, experience and goals. Whether you are a complete beginner or preparing for your practical driving test, we offer driving lessons designed to help you progress with confidence across Sheffield, Rotherham, Barnsley and Doncaster.
+                At Drive With AAA Driving School, our mission is to provide professional, high-quality manual and automatic driving lessons across South Yorkshire, including Sheffield, Rotherham, Barnsley and Doncaster. Our DVSA-approved driving instructors deliver patient, supportive and structured driving tuition tailored to each learner's needs, helping beginners and experienced learners build confidence and develop safe driving skills.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                We believe that learning to drive is about more than passing a test. It is about building safe driving habits, making informed decisions on the road and developing the skills to drive independently for years to come.
+                We believe learning to drive is about more than passing a test. It's about developing road awareness, mastering essential driving skills, making safe decisions and gaining the confidence to become a responsible, independent driver for life.
               </p>
             </div>
 

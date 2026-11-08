@@ -24,10 +24,10 @@ const Hero = () => {
               Drive with AAA
             </p>
             <h1 className="text-4xl lg:text-6xl font-extrabold mb-5 bg-gradient-to-r from-gray-900 to-brand bg-clip-text text-transparent tracking-tight animate-fadeIn animation-delay-200">
-              Driving School in Sheffield, Rotherham &amp; Chesterfield
+              Learn to Drive. Drive with Confidence
             </h1>
             <p className="text-gray-600 text-lg lg:text-xl max-w-2xl mb-8 animate-fadeIn animation-delay-400">
-              Helping learners across Sheffield, Rotherham, Barnsley and Chesterfield learn to drive with confidence. Friendly, professional tuition from experienced DVSA Approved Driving Instructors.
+              Helping learners across Sheffield, Rotherham, Barnsley and Doncaster learn to drive with confidence. We provide professional manual and automatic driving lessons with friendly, patient and DVSA approved driving instructors.
             </p>
             <Link 
               to="/contact" 
@@ -44,35 +44,43 @@ const Hero = () => {
               <div className="grid grid-cols-1 gap-3 text-gray-700">
                 <div className="flex items-start gap-3">
                   <span className="text-brand text-xl">✓</span>
-                  <span>Flexible training hours (early morning to late night)</span>
+                  <span>Professional manual and automatic driving lessons</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="text-brand text-xl">✓</span>
-                  <span>Student and worker-friendly learning</span>
+                  <span>DVSA-approved driving instructors</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="text-brand text-xl">✓</span>
-                  <span>Manual and automatic lessons</span>
+                  <span>Flexible driving lesson times to suit your schedule</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="text-brand text-xl">✓</span>
-                  <span>DVSA-approved UK driving instructors</span>
+                  <span>Lessons for beginners, students and working professionals</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="text-brand text-xl">✓</span>
-                  <span>Lessons tailored to your lifestyle</span>
+                  <span>Personalised driving tuition tailored to your ability</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="text-brand text-xl">✓</span>
-                  <span>Learn at your pace</span>
+                  <span>Patient and supportive driving instruction</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="text-brand text-xl">✓</span>
-                  <span>Training completed on schedule</span>
+                  <span>Build confidence, road awareness and safe driving skills</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="text-brand text-xl">✓</span>
-                  <span>Pass with confidence</span>
+                  <span>Structured driving lessons focused on your progress</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-brand text-xl">✓</span>
+                  <span>Prepare for your practical driving test with confidence</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-brand text-xl">✓</span>
+                  <span>Covering Sheffield, Rotherham, Barnsley and Doncaster across South Yorkshire</span>
                 </div>
               </div>
             </div>
