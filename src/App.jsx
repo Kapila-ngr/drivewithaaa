@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -8,38 +9,15 @@ import Pricing from './components/Pricing'
 import Blog from './components/Blog'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Seo from './components/Seo'
 
 function App() {
   useEffect(() => {
-    // Ensure canonical URL is set dynamically
-    const canonicalUrl = 'https://www.drivewithaaa.co.uk' + window.location.pathname.replace(/\/$/, '')
-    let canonicalLink = document.querySelector('link[rel="canonical"]')
-    
-    if (!canonicalLink) {
-      canonicalLink = document.createElement('link')
-      canonicalLink.setAttribute('rel', 'canonical')
-      document.head.appendChild(canonicalLink)
-    }
-    
-    canonicalLink.setAttribute('href', canonicalUrl || 'https://www.drivewithaaa.co.uk')
-    
-    // Update Open Graph URL
-    let ogUrl = document.querySelector('meta[property="og:url"]')
-    if (!ogUrl) {
-      ogUrl = document.createElement('meta')
-      ogUrl.setAttribute('property', 'og:url')
-      document.head.appendChild(ogUrl)
-    }
-    ogUrl.setAttribute('content', canonicalUrl || 'https://www.drivewithaaa.co.uk')
-    
     // Register service worker for performance optimisation
     if ('serviceWorker' in navigator && import.meta.env.PROD) {
       window.addEventListener('load', () => {
         navigator.serviceWorker
           .register('/sw.js')
-          .then((registration) => {
-            console.log('SW registered:', registration)
-          })
           .catch((error) => {
             console.log('SW registration failed:', error)
           })
@@ -49,15 +27,19 @@ function App() {
 
   return (
     <>
+      <Seo />
       <Header />
       <main>
-        <Hero />
-        <About />
-        <Lessons />
-        <Results />
-        <Pricing />
-        <Blog />
-        <Contact />
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/lessons" element={<Lessons />} />
+          <Route path="/results" element={<Results />} />
+          <Route path="/packages" element={<Pricing />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
       </main>
       <Footer />
     </>

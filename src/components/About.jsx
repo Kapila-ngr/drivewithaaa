@@ -86,9 +86,7 @@ const About = () => {
     },
     {
       icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
+        <span aria-hidden="true" className="flex h-8 w-8 items-center justify-center text-3xl font-bold leading-none">£</span>
       ),
       title: 'Transparent Pricing',
       description: 'Competitive rates with no hidden fees'
@@ -104,16 +102,16 @@ const About = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-light rounded-full text-brand text-sm font-semibold mb-4 transform hover:scale-105 transition-transform">
+          {/* <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-light rounded-full text-brand text-sm font-semibold mb-4 transform hover:scale-105 transition-transform">
             <span className="w-2 h-2 bg-brand rounded-full animate-pulse"></span>
             About Us
-          </div>
+          </div> */}
           <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
             Drive with AAA
           </h2>
           <div className="w-24 h-1.5 bg-gradient-to-r from-brand to-accent mx-auto rounded-full mb-8 animate-expandWidth"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Your trusted partner for professional driving instruction in Sheffield and Rotherham
+            Professional Manual &amp; Automatic Driving Lessons in Sheffield, Rotherham, Barnsley &amp; Doncaster
           </p>
         </div>
 
@@ -131,13 +129,10 @@ const About = () => {
                 Our Mission
               </h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                With years of experience and a proven track record, we pride ourselves on delivering high-quality driving instruction 
-                tailored to your individual needs. Our commitment is to create safe, confident drivers who are prepared for a lifetime on the road.
+                At Drive With AAA Driving School, our mission is to provide professional, high-quality manual and automatic driving lessons across South Yorkshire, including Sheffield, Rotherham, Barnsley and Doncaster. Our DVSA-approved driving instructors deliver patient, supportive and structured driving tuition tailored to each learner's needs, helping beginners and experienced learners build confidence and develop safe driving skills.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Our ADI-approved instructors are patient, professional, and dedicated to helping you succeed. 
-                Whether you're a complete beginner or looking to refine your skills, we offer flexible lesson plans 
-                designed around your schedule and goals.
+                We believe learning to drive is about more than passing a test. It's about developing road awareness, mastering essential driving skills, making safe decisions and gaining the confidence to become a responsible, independent driver for life.
               </p>
             </div>
 
@@ -174,7 +169,7 @@ const About = () => {
             </svg>
             <div className="text-left">
               <p className="text-sm text-gray-500 font-medium">Serving</p>
-              <p className="text-lg font-bold text-gray-900">Sheffield & Rotherham</p>
+              <p className="text-lg font-bold text-gray-900">Sheffield, Rotherham, Barnsley, Doncaster & Chesterfield</p>
             </div>
           </div>
         </div>

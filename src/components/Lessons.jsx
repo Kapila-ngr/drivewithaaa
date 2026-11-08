@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 const CloseIcon = () => (
   <svg
@@ -215,19 +216,13 @@ const Lessons = () => {
               </div>
               
               <div className="text-center">
-                <a 
-                  href="#contact" 
+                <Link 
+                  to="/contact" 
                   className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-brand to-accent text-white text-lg font-semibold rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    closeModal();
-                    setTimeout(() => {
-                      document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
-                    }, 300);
-                  }}
+                  onClick={closeModal}
                 >
                   Book This Course
-                </a>
+                </Link>
               </div>
             </div>
           </div>

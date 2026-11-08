@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Hero = () => {
   return (
     <section id="hero" className="relative py-32 lg:py-40 px-4 overflow-hidden">
@@ -19,24 +21,20 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           <div className="text-left">
             <p className="text-brand text-xl lg:text-2xl font-semibold mb-4 animate-fadeIn">
-              Your Journey to Safe Driving Starts Here
-            </p>
-            <h1 className="text-5xl lg:text-7xl font-extrabold mb-5 bg-gradient-to-r from-gray-900 to-brand bg-clip-text text-transparent tracking-tight animate-fadeIn animation-delay-200 lg:h-[82px] lg:flex lg:items-center">
               Drive with AAA
+            </p>
+            <h1 className="text-4xl lg:text-6xl font-extrabold mb-5 bg-gradient-to-r from-gray-900 to-brand bg-clip-text text-transparent tracking-tight animate-fadeIn animation-delay-200">
+              Learn to Drive. Drive with Confidence
             </h1>
             <p className="text-gray-600 text-lg lg:text-xl max-w-2xl mb-8 animate-fadeIn animation-delay-400">
-              Helping learners across Sheffield, Rotherham, Barnsley and Chesterfield learn to drive with confidence. Friendly, professional tuition from experienced DVSA Approved Driving Instructors.
+              Helping learners across Sheffield, Rotherham, Barnsley and Doncaster learn to drive with confidence. We provide professional manual and automatic driving lessons with friendly, patient and DVSA approved driving instructors.
             </p>
-            <a 
-              href="#contact" 
+            <Link 
+              to="/contact" 
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-brand to-accent text-white text-lg font-semibold rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 hover:scale-105"
-              onClick={(e) => {
-                e.preventDefault();
-                document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
-              }}
             >
               Book Your First Lesson
-            </a>
+            </Link>
           </div>
 
           <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-8 bg-white/40 rounded-3xl shadow-2xl border border-white/70 p-5 sm:p-8 backdrop-blur-xl animate-fadeIn animation-delay-400">
@@ -46,35 +44,43 @@ const Hero = () => {
               <div className="grid grid-cols-1 gap-3 text-gray-700">
                 <div className="flex items-start gap-3">
                   <span className="text-brand text-xl">✓</span>
-                  <span>Flexible training hours (early morning to late night)</span>
+                  <span>Professional manual and automatic driving lessons</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="text-brand text-xl">✓</span>
-                  <span>Student and worker-friendly learning</span>
+                  <span>DVSA-approved driving instructors</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="text-brand text-xl">✓</span>
-                  <span>Manual and automatic lessons</span>
+                  <span>Flexible driving lesson times to suit your schedule</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="text-brand text-xl">✓</span>
-                  <span>DVSA-approved UK driving instructors</span>
+                  <span>Lessons for beginners, students and working professionals</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="text-brand text-xl">✓</span>
-                  <span>Lessons tailored to your lifestyle</span>
+                  <span>Personalised driving tuition tailored to your ability</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="text-brand text-xl">✓</span>
-                  <span>Learn at your pace</span>
+                  <span>Patient and supportive driving instruction</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="text-brand text-xl">✓</span>
-                  <span>Training completed on schedule</span>
+                  <span>Build confidence, road awareness and safe driving skills</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="text-brand text-xl">✓</span>
-                  <span>Pass with confidence</span>
+                  <span>Structured driving lessons focused on your progress</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-brand text-xl">✓</span>
+                  <span>Prepare for your practical driving test with confidence</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-brand text-xl">✓</span>
+                  <span>Covering Sheffield, Rotherham, Barnsley and Doncaster across South Yorkshire</span>
                 </div>
               </div>
             </div>

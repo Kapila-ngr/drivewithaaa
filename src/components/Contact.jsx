@@ -5,6 +5,8 @@ const Contact = () => {
   const [key, setKey] = useState(0);
   const [enquiry, setEnquiry] = useState({
     name: '',
+    email: '',
+    contactNumber: '',
     postcode: '',
     lessonType: 'Manual lessons',
     startDate: '',
@@ -50,7 +52,7 @@ const Contact = () => {
   const contactInfo = [
     { label: 'Phone', value: '+44 7743 211110', href: 'tel:+447743211110' },
     { label: 'Email', value: 'info@drivewithaaa.co.uk', href: 'mailto:info@drivewithaaa.co.uk' },
-    { label: 'Areas Covered', value: 'Sheffield and Rotherham', href: null }
+    { label: 'Areas Covered', value: 'Sheffield, Rotherham, Barnsley, Doncaster and Chesterfield', href: null }
   ];
 
   const handleEnquiryChange = (event) => {
@@ -85,6 +87,8 @@ const Contact = () => {
       setSubmissionMessage('Thank you. Your enquiry has been sent successfully.');
       setEnquiry({
         name: '',
+        email: '',
+        contactNumber: '',
         postcode: '',
         lessonType: 'Manual lessons',
         startDate: '',
@@ -111,34 +115,8 @@ const Contact = () => {
         </h2>
         <div className="w-16 h-1 bg-gradient-to-r from-brand to-accent mx-auto rounded-full mb-5"></div>
         <p className={`text-center max-w-2xl mx-auto mb-12 text-gray-600 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          Ready to start your driving journey? Contact our Sheffield and Rotherham driving instructors to book your first lesson or ask any questions.
+          Ready to start your driving journey? Contact our driving instructors to ask about lessons in Sheffield, Rotherham, Barnsley and Chesterfield.
         </p>
-        
-        <div className={`bg-white rounded-2xl shadow-xl p-8 mb-8 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <address className="not-italic">
-            <ul className="space-y-5">
-            {contactInfo.map((info, index) => (
-              <li key={index} className="flex items-start gap-4 text-gray-700">
-                <span className="text-brand font-bold mt-0.5">→</span>
-                <div>
-                  <strong className="font-semibold">{info.label}:</strong>{' '}
-                  {info.href ? (
-                    <a
-                      href={info.href}
-                      aria-label={`${info.label}: ${info.value}`}
-                      className="text-brand hover:text-accent transition-colors"
-                    >
-                      {info.value}
-                    </a>
-                  ) : (
-                    <span>{info.value}</span>
-                  )}
-                </div>
-              </li>
-            ))}
-            </ul>
-          </address>
-        </div>
 
         <form
           onSubmit={handleEnquirySubmit}
@@ -172,6 +150,33 @@ const Contact = () => {
                 onChange={handleEnquiryChange}
                 required
                 autoComplete="postal-code"
+                className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-brand focus:outline-none focus:ring-2 focus:ring-red-200"
+              />
+            </label>
+
+            <label className="block text-left">
+              <span className="block text-sm font-semibold text-gray-700 mb-2">Your email address</span>
+              <input
+                type="email"
+                name="email"
+                value={enquiry.email}
+                onChange={handleEnquiryChange}
+                required
+                autoComplete="email"
+                className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-brand focus:outline-none focus:ring-2 focus:ring-red-200"
+              />
+            </label>
+
+            <label className="block text-left">
+              <span className="block text-sm font-semibold text-gray-700 mb-2">Your contact number</span>
+              <input
+                type="tel"
+                name="contactNumber"
+                value={enquiry.contactNumber}
+                onChange={handleEnquiryChange}
+                required
+                autoComplete="tel"
+                inputMode="tel"
                 className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-brand focus:outline-none focus:ring-2 focus:ring-red-200"
               />
             </label>
@@ -241,6 +246,32 @@ const Contact = () => {
             {isSubmitting ? 'Sending Enquiry...' : 'Send Enquiry'}
           </button>
         </form>
+
+        <div className={`bg-white rounded-2xl shadow-xl p-8 mb-8 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <address className="not-italic">
+            <ul className="space-y-5">
+            {contactInfo.map((info, index) => (
+              <li key={index} className="flex items-start gap-4 text-gray-700">
+                <span className="text-brand font-bold mt-0.5">→</span>
+                <div>
+                  <strong className="font-semibold">{info.label}:</strong>{' '}
+                  {info.href ? (
+                    <a
+                      href={info.href}
+                      aria-label={`${info.label}: ${info.value}`}
+                      className="text-brand hover:text-accent transition-colors"
+                    >
+                      {info.value}
+                    </a>
+                  ) : (
+                    <span>{info.value}</span>
+                  )}
+                </div>
+              </li>
+            ))}
+            </ul>
+          </address>
+        </div>
 
         <div className={`text-center transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <a 
